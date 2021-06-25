@@ -2,17 +2,20 @@
   <head>
     <title>test page</title>
     <style>
-     html {
-       font-size: 10px; /* this is the conflicting line from bootstrap.min.css --> */
-     }
+      html {
+        font-size: 10px; /* this is the conflicting line from bootstrap.min.css --> */
+      }
     </style>
     <link rel="stylesheet" href="./tailwind.css" />
   </head>
 
   <body>
     This line is supposed to be small (from bootstrap configuration)<br /><br />
-    <div style="font-size: 16px"> <!-- <---- this line is not working -->
-      <div class="text-base">This line is supposed to be big (from tailwind configuration)</div>
+    <div class="text-parent">
+      <!-- <---- this line is not working -->
+      <div class="text-base">
+        This line is supposed to be big (from tailwind configuration)
+      </div>
     </div>
   </body>
 </html>
